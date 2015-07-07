@@ -6,7 +6,8 @@
 
 #include "TopSort.h"
 
-int main() {
+int main()
+{
 #ifdef ZBYL
     freopen("rosalind_dag.txt", "r", stdin);
     freopen("rosalind_dag.out", "w", stdout);
@@ -38,7 +39,7 @@ int main() {
 
         std::vector<int> sorted;
         bool isAcyclic = topSort(neighbourListGraph, sorted);
-        
+
         std::cout << (isAcyclic ? 1 : -1) << " ";
     }
 
