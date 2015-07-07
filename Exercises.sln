@@ -23,6 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Superman", "Superman\Superm
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qeens", "Qeens\Qeens.vcxproj", "{00FCCCDA-9662-45C7-9E79-6DA70AD9BE72}"
 EndProject
+<<<<<<< HEAD
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindSq", "RosalindSq\RosalindSq.vcxproj", "{413F44C8-05F2-46C6-8236-E5D1941F3D9D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindTs", "RosalindTs\RosalindTs.vcxproj", "{6E5B7B8F-732B-45AE-AE7C-15F7A0BD620C}"
@@ -30,6 +31,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindScc", "RosalindScc\RosalindScc.vcxproj", "{006D593B-B686-4CD9-8722-6806A44AC5BB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindSC", "RosalindSC\RosalindSC.vcxproj", "{5224FFC1-0EA3-4C08-9B85-F64CBBC9925C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindBF", "RosalindBF\RosalindBF.vcxproj", "{134A5239-E08F-4C3E-BEB9-E5430A3D24C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindNWC", "RosalindNWC\RosalindNWC.vcxproj", "{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +82,7 @@ Global
 		{00FCCCDA-9662-45C7-9E79-6DA70AD9BE72}.Debug|Win32.Build.0 = Debug|Win32
 		{00FCCCDA-9662-45C7-9E79-6DA70AD9BE72}.Release|Win32.ActiveCfg = Release|Win32
 		{00FCCCDA-9662-45C7-9E79-6DA70AD9BE72}.Release|Win32.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{413F44C8-05F2-46C6-8236-E5D1941F3D9D}.Debug|Win32.ActiveCfg = Debug|Win32
 		{413F44C8-05F2-46C6-8236-E5D1941F3D9D}.Debug|Win32.Build.0 = Debug|Win32
 		{413F44C8-05F2-46C6-8236-E5D1941F3D9D}.Release|Win32.ActiveCfg = Release|Win32
@@ -93,6 +99,16 @@ Global
 		{5224FFC1-0EA3-4C08-9B85-F64CBBC9925C}.Debug|Win32.Build.0 = Debug|Win32
 		{5224FFC1-0EA3-4C08-9B85-F64CBBC9925C}.Release|Win32.ActiveCfg = Release|Win32
 		{5224FFC1-0EA3-4C08-9B85-F64CBBC9925C}.Release|Win32.Build.0 = Release|Win32
+=======
+		{134A5239-E08F-4C3E-BEB9-E5430A3D24C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{134A5239-E08F-4C3E-BEB9-E5430A3D24C0}.Debug|Win32.Build.0 = Debug|Win32
+		{134A5239-E08F-4C3E-BEB9-E5430A3D24C0}.Release|Win32.ActiveCfg = Release|Win32
+		{134A5239-E08F-4C3E-BEB9-E5430A3D24C0}.Release|Win32.Build.0 = Release|Win32
+		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Debug|Win32.Build.0 = Debug|Win32
+		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Release|Win32.ActiveCfg = Release|Win32
+		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Release|Win32.Build.0 = Release|Win32
+>>>>>>> 1ee7854bb93827d75eae77e427c3800bd128bd7b
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
