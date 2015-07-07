@@ -31,7 +31,7 @@ int main() {
         neighbourListGraph.addDirectedEdge( WeightedEdge<int>(p, k, 1) );
     }
 
-    std::vector< DijkstraDistPrev<int> > distances = dijkstra(neighbourListGraph, 0, -1);
+    std::vector< NodeDistPrev<int> > distances = dijkstra(neighbourListGraph, 0, -1);
 
     for (auto dp : distances)
     {
