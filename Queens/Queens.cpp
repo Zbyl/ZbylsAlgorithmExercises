@@ -6,7 +6,7 @@
 
 bool isQueenAllowed(const std::vector<int>& queens, int nextColumn)
 {
-    for (int i = 0; i < queens.size(); ++i)
+    for (size_t i = 0; i < queens.size(); ++i)
     {
         if (queens[i] == nextColumn)
             return false;
