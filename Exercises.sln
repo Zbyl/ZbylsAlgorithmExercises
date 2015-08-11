@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindNWC", "RosalindNWC\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RosalindGS", "RosalindGS\RosalindGS.vcxproj", "{AF8E20FE-8B78-4B28-BD6F-0A466C185FC1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWTest-Cycles", "SWTest-Cycles\SWTest-Cycles.vcxproj", "{2B020CE7-75A2-4BAD-B1AE-9C3E834511AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -107,6 +109,10 @@ Global
 		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Debug|Win32.Build.0 = Debug|Win32
 		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Release|Win32.ActiveCfg = Release|Win32
 		{6B046CF6-DAED-47FA-98E3-14BD0EFB851B}.Release|Win32.Build.0 = Release|Win32
+		{2B020CE7-75A2-4BAD-B1AE-9C3E834511AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2B020CE7-75A2-4BAD-B1AE-9C3E834511AC}.Debug|Win32.Build.0 = Debug|Win32
+		{2B020CE7-75A2-4BAD-B1AE-9C3E834511AC}.Release|Win32.ActiveCfg = Release|Win32
+		{2B020CE7-75A2-4BAD-B1AE-9C3E834511AC}.Release|Win32.Build.0 = Release|Win32
 		{AF8E20FE-8B78-4B28-BD6F-0A466C185FC1}.Debug|Win32.ActiveCfg = Debug|Win32
 		{AF8E20FE-8B78-4B28-BD6F-0A466C185FC1}.Debug|Win32.Build.0 = Debug|Win32
 		{AF8E20FE-8B78-4B28-BD6F-0A466C185FC1}.Release|Win32.ActiveCfg = Release|Win32
