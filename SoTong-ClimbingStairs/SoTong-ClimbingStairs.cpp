@@ -9,56 +9,10 @@ Please be very careful.
 */
 
 #include <iostream>
+#include <utility>
+#include <algorithm>
 
 using namespace std;
-
-int luckyNumber(int n, int m)
-{
-    int bottoms[10];
-
-    int curBottom = 1;
-    for (int i = 0; i < n; ++i)
-    {
-        bottoms[i] = curBottom;
-        curBottom *= 2;
-    }
-
-    int tops[10];
-
-    int curTop = m;
-    for (int i = n - 1; i >= 0; --i)
-    {
-        tops[i] = curTop;
-        curTop /= 2;
-    }
-
-    if (bottoms[n-1] > m)
-        return 0;
-
-    
-
-    int validCases = 0;
-    for (int k = bottoms[0]; k <= m; ++k)
-    {
-        int curValue = k / 2;
-        int curValidCases = 1;
-        for (int i = n - 2; i >= 0; --i)
-        {
-            if (curValue < bottoms[i])
-            {
-                curValidCases = 0;
-                break;
-            }
-
-            curValidCases *= (curValue - bottoms[i] + 1);
-            curValue /= 2;
-        }
-
-        validCases += curValidCases;
-    }
-
-    return validCases;
-}
 
 int main(int argc, char** argv)
 {
@@ -83,11 +37,41 @@ int main(int argc, char** argv)
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        int N, M;
-        cin >> N >> M;
+        int N;
+        cin >> N;
+
+        int stairs[301];
+        stairs[0] = 0;
+        for (int i = 0; i < N; ++i)
+        {
+            cin >> stairs[i + 1];
+        }
+
+        int costTwo[301];
+        int costOneOne[301];
+        int costTwoOnes[301];
+
+        costTwo[0] = 0;
+        costOneOne[0] = 0;
+        costTwoOnes[0] = 0;
+
+        auto bestCost = [&](int s)
+        {
+            return std::max( std::max(costTwo[s], costOneOne[s]), costTwoOnes[s] );
+        };
+
+        for (int i = 1; i <= N; ++i)
+        {
+            if (i > 1)
+                costTwo[i] = stairs[i] + bestCost(i-2);
+            else
+                costTwo[i] = -1000;
+            costOneOne[i] = stairs[i] + costTwo[i-1];
+            costTwoOnes[i] = stairs[i] + costOneOne[i-1];
+        }
 
         /////////////////////////////////////////////////////////////////////////////////////////////
-        int Answer = luckyNumber(N, M);
+        int Answer = bestCost(N);
         
         // Print the answer to standard output(screen).
         cout << "Case #" << test_case+1 << endl;
