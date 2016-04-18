@@ -202,14 +202,15 @@ int backwardTraversal(int turnCount, const Turn turns[], int orcFreeTurnCosts[])
     return orcFreeTurnCosts[0];
 }
 
-const int MAX_TURNS = 10;
+const int MAX_TURNS = 20;
 Turn gTurns[MAX_TURNS];
 int gOrcFreeTurnCosts[MAX_TURNS + 1];
 
 int main()
 {
 #ifdef ZBYL
-    freopen("SWTest-find-Orcs-input.txt", "r", stdin);
+    //freopen("SWTest-find-Orcs-input.txt", "r", stdin);
+    freopen("sample_input.txt", "r", stdin);
 #endif
 
     int T;
@@ -223,14 +224,14 @@ int main()
         for (int n = 0; n < N; ++n)
         {
             int c, o;
-            std::cin >> c >> o;
+            std::cin >> o >> c;
             gTurns[n].cost = c;
             gTurns[n].orcs = o;
         }
 
         //int minCost = forwardTraversal(N, gTurns);
         int minCost = backwardTraversal(N, gTurns, gOrcFreeTurnCosts);
-        std::cout << minCost << std::endl;
+        std::cout << "#" << (t + 1) << " " << minCost << std::endl;
     }
 
     return 0;

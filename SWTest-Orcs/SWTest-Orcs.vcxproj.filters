@@ -18,6 +18,9 @@
     <Text Include="SWTest-find-Orcs-input.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="sample_input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SWTest-Orcs.cpp">
