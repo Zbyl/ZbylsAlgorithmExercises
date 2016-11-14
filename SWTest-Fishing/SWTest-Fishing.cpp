@@ -36,16 +36,16 @@ void openGate(int pos, int numGuys, int preferredDirection, int* arr)
     }
 }
 
-int openGates(int gate0, int gate1, int gate2, int preferredDirection)
+int openGates(int gate0, int gate1, int gate2, int preferredDir0, int preferredDir1, int preferredDir2)
 {
     int arr[MAX_N];
 
     for (int i = 0; i < N; ++i)
         arr[i] = 0;
 
-    openGate(gates_pos[gate0], gates_guys[gate0], preferredDirection, arr);
-    openGate(gates_pos[gate1], gates_guys[gate1], preferredDirection, arr);
-    openGate(gates_pos[gate2], gates_guys[gate2], preferredDirection, arr);
+    openGate(gates_pos[gate0], gates_guys[gate0], preferredDir0, arr);
+    openGate(gates_pos[gate1], gates_guys[gate1], preferredDir1, arr);
+    openGate(gates_pos[gate2], gates_guys[gate2], preferredDir2, arr);
 
     int result = 0;
     for (int i = 0; i < N; ++i)
@@ -67,12 +67,15 @@ int openGates()
 
             int z = 3 - x - y;
 
-            for (int dir = -1; dir <= 1; ++dir)
+            for (int dir0 = -1; dir0 <= 1; ++dir0)
+            for (int dir1 = -1; dir1 <= 1; ++dir1)
+            for (int dir2 = -1; dir2 <= 1; ++dir2)
             {
-                if (dir == 0)
-                    continue;
+                if (dir0 == 0) continue;
+                if (dir1 == 0) continue;
+                if (dir2 == 0) continue;
 
-                int result = openGates(x, y, z, dir);
+                int result = openGates(x, y, z, dir0, dir1, dir2);
                 if (result < bestResult)
                     bestResult = result;
             }
