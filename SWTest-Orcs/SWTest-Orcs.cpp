@@ -42,7 +42,7 @@ struct Turn
     int orcs;   ///< Number of orcs that we meet in given turn.
 };
 
-/// @brief Expands given state one turn backwards.
+/// @brief Expands given state one turn forwards.
 /// @param state                Minimal state, that is needed to reach the final state, following our path.
 /// @param turnCount            Number of turns.
 /// @param turnIdx              Current turn index (equal to turnCount for the final state).
@@ -50,6 +50,9 @@ struct Turn
 /// @param minCost              Minimal cost of reaching final state. (-1 if not known yet)
 void traverseForward(const State& state, int turnCount, int turnIdx, const Turn turns[], int& minimalCost)
 {
+    if ( (minimalCost != -1) && (state.cost >= minimalCost) )
+        return;
+
     if (turnIdx == turnCount)
     {
         // we have reached the final state
@@ -229,9 +232,11 @@ int main()
             gTurns[n].orcs = o;
         }
 
-        //int minCost = forwardTraversal(N, gTurns);
-        int minCost = backwardTraversal(N, gTurns, gOrcFreeTurnCosts);
-        std::cout << "#" << (t + 1) << " " << minCost << std::endl;
+        int minCost0 = forwardTraversal(N, gTurns);
+        int minCost1 = backwardTraversal(N, gTurns, gOrcFreeTurnCosts);
+        if (minCost0 != minCost1)
+            std::cout << "#" << (t + 1) << " Bug." << std::endl;
+        std::cout << "#" << (t + 1) << " " << minCost0 << std::endl;
     }
 
     return 0;
